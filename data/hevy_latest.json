@@ -1,0 +1,595 @@
+{
+  "last_updated": "2026-06-09T15:16:05.064881",
+  "workouts": [
+    {
+      "title": "LEG DAY AND ABS FOCUSED",
+      "start_time": "2026-06-09T11:11:47+00:00",
+      "end_time": "2026-06-09T12:16:57+00:00",
+      "exercises": [
+        {
+          "title": "Leg Press (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 12,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 80
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 130
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 130
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 130
+            }
+          ]
+        },
+        {
+          "title": "Leg Extension (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 3,
+              "weight_kg": 66
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 66
+            }
+          ]
+        },
+        {
+          "title": "Lying Leg Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 39
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 46
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
+      "start_time": "2026-06-08T11:41:05+00:00",
+      "end_time": "2026-06-08T12:53:34+00:00",
+      "exercises": [
+        {
+          "title": "Pull Up",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": null
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": null
+            }
+          ]
+        },
+        {
+          "title": "Pull Up (Weighted)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 15
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 15
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 70
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown - Close Grip (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 60
+            }
+          ]
+        },
+        {
+          "title": "Single Arm Cable Row",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 25
+            }
+          ]
+        },
+        {
+          "title": "T Bar Row",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 25
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 25
+            }
+          ]
+        },
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 53
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 53
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 51
+            }
+          ]
+        },
+        {
+          "title": "Hammer Curl (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 15
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Late night workout \ud83c\udf19",
+      "start_time": "2026-06-07T11:08:02+00:00",
+      "end_time": "2026-06-07T12:53:32+00:00",
+      "exercises": [
+        {
+          "title": "Bench Press (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 30
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 45
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 55
+            }
+          ]
+        },
+        {
+          "title": "Incline Bench Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 22.5
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 22.5
+            }
+          ]
+        },
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 62.5
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 62.5
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 62.5
+            }
+          ]
+        },
+        {
+          "title": "Shoulder Press (Machine Plates)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 60
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LEG DAY AND ABS FOCUSED",
+      "start_time": "2026-06-05T09:17:40+00:00",
+      "end_time": "2026-06-05T10:41:42+00:00",
+      "exercises": [
+        {
+          "title": "Leg Press (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 12,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 120
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 120
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 120
+            }
+          ]
+        },
+        {
+          "title": "Leg Extension (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            }
+          ]
+        },
+        {
+          "title": "Lying Leg Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 32
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 39
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 39
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 46
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
+      "start_time": "2026-06-03T15:40:33+00:00",
+      "end_time": "2026-06-03T17:24:28+00:00",
+      "exercises": [
+        {
+          "title": "Pull Up",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": null
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": null
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 67
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 67
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 67
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown - Close Grip (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 57
+            }
+          ]
+        },
+        {
+          "title": "Seated Cable Row - Bar Grip",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 51
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 51
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 51
+            }
+          ]
+        },
+        {
+          "title": "Seated Row (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 45
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 45
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 45
+            }
+          ]
+        },
+        {
+          "title": "Face Pull",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 23.75
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 23.75
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 23.75
+            }
+          ]
+        },
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 53
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 53
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 53
+            }
+          ]
+        },
+        {
+          "title": "Hammer Curl (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 15
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 15
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 15
+            }
+          ]
+        },
+        {
+          "title": "Skullcrusher (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 10
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
