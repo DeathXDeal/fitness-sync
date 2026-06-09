@@ -16,6 +16,8 @@ def get_all_workouts():
             headers=headers,
             params={"page": page, "pageSize": 10}
         )
+        if response.status_code == 404:
+            break
         response.raise_for_status()
         data = response.json()
         batch = data.get('workouts', [])
