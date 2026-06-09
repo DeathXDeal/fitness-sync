@@ -14,7 +14,7 @@ def get_all_workouts():
         response = requests.get(
             f"{BASE_URL}/workouts",
             headers=headers,
-            params={"page": page, "pageSize": 10}
+            params={"page": page, "pageSize": 100}
         )
         if response.status_code == 404:
             break
