@@ -7,14 +7,23 @@ HEVY_API_KEY = os.environ['HEVY_API_KEY']
 BASE_URL = "https://api.hevyapp.com/v1"
 headers = {"api-key": HEVY_API_KEY}
 
-def get_workouts():
-    response = requests.get(
-        f"{BASE_URL}/workouts",
-        headers=headers,
-        params={"page": 1, "pageSize": 5}
-    )
-    response.raise_for_status()
-    return response.json()
+def get_all_workouts():
+    all_workouts = []
+    page = 1
+    while True:
+        response = requests.get(
+            f"{BASE_URL}/workouts",
+            headers=headers,
+            params={"page": page, "pageSize": 10}
+        )
+        response.raise_for_status()
+        data = response.json()
+        batch = data.get('workouts', [])
+        if not batch:
+            break
+        all_workouts.extend(batch)
+        page += 1
+    return all_workouts
 
 def format_workout(workout):
     exercises = []
@@ -38,8 +47,7 @@ def format_workout(workout):
     }
 
 def main():
-    data = get_workouts()
-    workouts = data.get('workouts', [])
+    workouts = get_all_workouts()
     output = {
         "last_updated": datetime.utcnow().isoformat(),
         "workouts": [format_workout(w) for w in workouts]
