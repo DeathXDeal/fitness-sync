@@ -57,6 +57,9 @@ def main():
     os.makedirs('data', exist_ok=True)
     with open('data/hevy_latest.json', 'w') as f:
         json.dump(output, f, indent=2)
+    dated = datetime.utcnow().strftime('%Y-%m-%d')
+    with open(f'data/hevy_{dated}.json', 'w') as f:
+        json.dump(output, f, indent=2)
     print(f"Saved {len(workouts)} workouts")
 
 if __name__ == "__main__":
