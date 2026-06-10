@@ -1,6 +1,98 @@
 {
-  "last_updated": "2026-06-10T05:20:33.758523",
+  "last_updated": "2026-06-10T10:04:50.652976",
   "workouts": [
+    {
+      "title": "Afternoon workout \ud83d\udcaa",
+      "start_time": "2026-06-10T04:49:03+00:00",
+      "end_time": "2026-06-10T06:08:32+00:00",
+      "exercises": [
+        {
+          "title": "Bench Press (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 30
+            },
+            {
+              "set_type": null,
+              "reps": 3,
+              "weight_kg": 60
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 55
+            }
+          ]
+        },
+        {
+          "title": "Incline Bench Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 20
+            }
+          ]
+        },
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 62.5
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 62.5
+            }
+          ]
+        },
+        {
+          "title": "Shoulder Press (Machine Plates)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 50
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "LEG DAY AND ABS FOCUSED",
       "start_time": "2026-06-09T11:11:47+00:00",
