@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-11T14:39:26.690144",
+  "last_updated": "2026-06-11T18:16:16.503881",
   "total_workouts": 102,
   "fitbit_today": {
     "date": "2026-06-11",
-    "steps": 10309,
-    "calories_burnt": 2418,
+    "steps": 15876,
+    "calories_burnt": 2888,
     "sleep_hours": 7.2,
     "weight_kg": 62.0
   },
