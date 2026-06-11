@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Log</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --border: #e4e2da;
+    --text: #1a1a18;
+    --muted: #6b6b65;
+    --accent: #2d6a4f;
+    --accent-light: #e8f4ee;
+    --accent-muted: #4a9970;
+    --warn: #c0392b;
+    --warn-light: #fdf0ef;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding-bottom: 120px;
+  }
+
+  .top-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .top-bar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+
+  .date-label {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .reset-btn {
+    font-size: 12px;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .reset-btn:hover { background: var(--bg); }
+
+  .macro-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  .macro-card {
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+  }
+
+  .macro-card.cal { background: var(--accent-light); }
+  .macro-card.cal.over { background: var(--warn-light); }
+
+  .macro-val {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .macro-card.cal .macro-val { font-size: 24px; color: var(--accent); }
+  .macro-card.cal.over .macro-val { color: var(--warn); }
+
+  .macro-lbl {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .progress-bar {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    max-width: 100%;
+  }
+
+  .progress-fill.over { background: var(--warn); }
+
+  .yesterday-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .yesterday-bar strong { color: var(--text); font-weight: 500; }
+  .yesterday-tag {
+    background: var(--bg);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+  }
+
+  .content { padding: 0 16px; }
+
+  .section { margin-top: 20px; }
+
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    padding: 0 4px;
+  }
+
+  .food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 6px;
+  }
+
+  @media (max-width: 480px) {
+    .food-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .food-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    transition: all 0.12s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .food-btn:active { transform: scale(0.97); }
+
+  .food-btn.active {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  .food-btn .fname {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+
+  .food-btn .fkcal {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .food-btn.active .fkcal { color: var(--accent-muted); }
+
+  .food-btn .badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--accent);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-section {
+    margin-top: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+
+  .custom-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+
+  .custom-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .custom-row input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+    font-size: 13px;
+    color: var(--text);
+    width: 100%;
+  }
+
+  .custom-row input::placeholder { color: var(--muted); }
+  .custom-row input:focus { outline: none; border-color: var(--accent); }
+
+  .add-custom-btn {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .add-custom-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .copy-btn {
+    flex: 1;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .copy-btn:disabled { background: var(--border); color: var(--muted); cursor: default; }
+  .copy-btn:not(:disabled):active { background: #1e4d38; }
+
+  .copy-btn.copied { background: #27ae60; }
+
+  .target-hint {
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    padding: 4px 0 0;
+    width: 100%;
+  }
+
+  .target-hint .diff { font-weight: 600; color: var(--accent); }
+  .target-hint .diff.over { color: var(--warn); }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-bar-row">
+    <span class="date-label" id="dateLabel"></span>
+    <button class="reset-btn" onclick="resetDay()">Reset</button>
+  </div>
+  <div class="macro-row">
+    <div class="macro-card cal" id="calCard">
+      <div class="macro-val" id="calVal">0</div>
+      <div class="macro-lbl">Calories / 3000</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-val" id="proVal">0</div>
+      <div class="macro-lbl">Protein g</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-val" id="carbVal">0</div>
+      <div class="macro-lbl">Carbs g</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-val" id="fatVal">0</div>
+      <div class="macro-lbl">Fat g</div>
+    </div>
+  </div>
+</div>
+
+<div class="yesterday-bar" id="yesterdayBar" style="display:none">
+  <span>Yesterday:</span>
+  <span id="yesterdaySummary"></span>
+</div>
+
+<div class="content">
+  <div class="section">
+    <div class="section-title">Grains & Carbs</div>
+    <div class="food-grid" id="grid-grains"></div>
+  </div>
+  <div class="section">
+    <div class="section-title">Protein</div>
+    <div class="food-grid" id="grid-protein"></div>
+  </div>
+  <div class="section">
+    <div class="section-title">Dairy & Drinks</div>
+    <div class="food-grid" id="grid-dairy"></div>
+  </div>
+  <div class="section">
+    <div class="section-title">Fruit & Extras</div>
+    <div class="food-grid" id="grid-extras"></div>
+  </div>
+
+  <div class="custom-section">
+    <div class="custom-title">Add custom food</div>
+    <div class="custom-row">
+      <input type="text" id="customName" placeholder="Food name">
+      <input type="number" id="customKcal" placeholder="kcal">
+      <input type="number" id="customPro" placeholder="protein g">
+    </div>
+    <div class="custom-row">
+      <input type="number" id="customCarb" placeholder="carbs g">
+      <input type="number" id="customFat" placeholder="fat g">
+      <button class="add-custom-btn" onclick="addCustom()">+ Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-bar">
+  <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+    <button class="copy-btn" id="copyBtn" disabled onclick="copyLog()">Copy log for Claude</button>
+    <div class="target-hint" id="targetHint"></div>
+  </div>
+</div>
+
+<script>
+const TARGET = 3000;
+
+const FOODS = {
+  grains: [
+    { name: "Rice 100g", kcal: 130, p: 2.7, c: 28, f: 0.3 },
+    { name: "Rice 200g", kcal: 260, p: 5.4, c: 56, f: 0.6 },
+    { name: "Rice 400g", kcal: 520, p: 10.8, c: 112, f: 1.2 },
+    { name: "Wai Wai", kcal: 355, p: 7, c: 47, f: 16 },
+    { name: "Croissant", kcal: 160, p: 2, c: 20, f: 8 },
+    { name: "Chana dal 50g", kcal: 65, p: 3.5, c: 11, f: 1 },
+    { name: "Bread slice", kcal: 80, p: 3, c: 15, f: 1 },
+  ],
+  protein: [
+    { name: "Chicken 100g", kcal: 165, p: 31, c: 0, f: 3.6 },
+    { name: "Chicken 200g", kcal: 330, p: 62, c: 0, f: 7.2 },
+    { name: "Chicken 350g", kcal: 577, p: 108.5, c: 0, f: 12.6 },
+    { name: "Egg", kcal: 70, p: 6, c: 0.6, f: 5 },
+    { name: "Tuna 100g", kcal: 116, p: 26, c: 0, f: 1 },
+  ],
+  dairy: [
+    { name: "Milk 250ml", kcal: 152, p: 8, c: 12, f: 8.3 },
+    { name: "Milk 500ml", kcal: 305, p: 16, c: 24, f: 16.6 },
+    { name: "Milkshake sachet", kcal: 215, p: 5, c: 30, f: 8 },
+    { name: "Yoghurt 100g", kcal: 61, p: 3.5, c: 5, f: 3.3 },
+    { name: "Peanut butter tbsp", kcal: 95, p: 4, c: 3, f: 8 },
+  ],
+  extras: [
+    { name: "Banana", kcal: 105, p: 1.3, c: 27, f: 0.4 },
+    { name: "Orange", kcal: 60, p: 1.2, c: 15, f: 0.2 },
+    { name: "Apple", kcal: 80, p: 0.4, c: 21, f: 0.2 },
+    { name: "Oil 1 tbsp", kcal: 120, p: 0, c: 0, f: 14 },
+    { name: "Fruit cake piece", kcal: 50, p: 0.5, c: 10, f: 1 },
+    { name: "Nuts 30g", kcal: 185, p: 5, c: 6, f: 16 },
+  ]
+};
+
+const todayKey = () => new Date().toISOString().slice(0, 10);
+const yestKey = () => { const d = new Date(); d.setDate(d.getDate()-1); return d.toISOString().slice(0,10); };
+
+let counts = {};
+let customFoods = [];
+
+function init() {
+  const today = todayKey();
+  document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('en-AU', { weekday:'long', day:'numeric', month:'short' });
+
+  const saved = JSON.parse(localStorage.getItem('foodlog_' + today) || '{}');
+  counts = saved.counts || {};
+  customFoods = saved.custom || [];
+
+  const yest = JSON.parse(localStorage.getItem('foodlog_' + yestKey()) || 'null');
+  if (yest && yest.totals && yest.totals.kcal > 0) {
+    document.getElementById('yesterdayBar').style.display = 'flex';
+    const t = yest.totals;
+    document.getElementById('yesterdaySummary').innerHTML =
+      `<strong>${Math.round(t.kcal)} kcal</strong> &nbsp;<span class="yesterday-tag">${Math.round(t.p)}g P</span><span class="yesterday-tag">${Math.round(t.c)}g C</span><span class="yesterday-tag">${Math.round(t.f)}g F</span>`;
+  }
+
+  Object.keys(FOODS).forEach(cat => buildGrid(cat));
+  if (customFoods.length) rebuildCustomGrid();
+  updateTotals();
+}
+
+function buildGrid(cat) {
+  const grid = document.getElementById('grid-' + cat);
+  FOODS[cat].forEach((food, i) => {
+    const key = cat + '_' + i;
+    if (!(key in counts)) counts[key] = 0;
+    grid.appendChild(makeBtn(key, food));
+  });
+}
+
+function makeBtn(key, food) {
+  const btn = document.createElement('button');
+  btn.className = 'food-btn' + (counts[key] > 0 ? ' active' : '');
+  btn.id = 'btn_' + key;
+  btn.innerHTML = `<div class="fname">${food.name}</div><div class="fkcal">${food.kcal} kcal · ${food.p}g P</div>${counts[key] > 0 ? `<div class="badge">${counts[key]}</div>` : ''}`;
+  btn.addEventListener('click', () => tap(key, food, btn));
+  btn.addEventListener('contextmenu', e => { e.preventDefault(); untap(key, food, btn); });
+  return btn;
+}
+
+function tap(key, food, btn) {
+  counts[key] = (counts[key] || 0) + 1;
+  btn.className = 'food-btn active';
+  btn.querySelector('.fkcal').textContent = `${food.kcal} kcal · ${food.p}g P`;
+  let badge = btn.querySelector('.badge');
+  if (!badge) { badge = document.createElement('div'); badge.className = 'badge'; btn.appendChild(badge); }
+  badge.textContent = counts[key];
+  updateTotals();
+}
+
+function untap(key, food, btn) {
+  if (!counts[key]) return;
+  counts[key]--;
+  if (counts[key] === 0) {
+    btn.className = 'food-btn';
+    const badge = btn.querySelector('.badge');
+    if (badge) badge.remove();
+  } else {
+    btn.querySelector('.badge').textContent = counts[key];
+  }
+  updateTotals();
+}
+
+function rebuildCustomGrid() {
+  let grid = document.getElementById('grid-custom');
+  if (!grid) {
+    const section = document.createElement('div');
+    section.className = 'section';
+    section.id = 'section-custom';
+    section.innerHTML = '<div class="section-title">Custom</div><div class="food-grid" id="grid-custom"></div>';
+    document.querySelector('.custom-section').before(section);
+    grid = document.getElementById('grid-custom');
+  }
+  grid.innerHTML = '';
+  customFoods.forEach((food, i) => {
+    const key = 'custom_' + i;
+    if (!(key in counts)) counts[key] = 0;
+    grid.appendChild(makeBtn(key, food));
+  });
+}
+
+function addCustom() {
+  const name = document.getElementById('customName').value.trim();
+  const kcal = parseFloat(document.getElementById('customKcal').value) || 0;
+  const p = parseFloat(document.getElementById('customPro').value) || 0;
+  const c = parseFloat(document.getElementById('customCarb').value) || 0;
+  const f = parseFloat(document.getElementById('customFat').value) || 0;
+  if (!name || !kcal) return;
+  customFoods.push({ name, kcal, p, c, f });
+  ['customName','customKcal','customPro','customCarb','customFat'].forEach(id => document.getElementById(id).value = '');
+  rebuildCustomGrid();
+  save();
+}
+
+function getTotals() {
+  let kcal = 0, p = 0, c = 0, f = 0;
+  const allFoods = { ...Object.fromEntries(Object.keys(FOODS).flatMap(cat => FOODS[cat].map((food, i) => [cat+'_'+i, food]))) };
+  customFoods.forEach((food, i) => { allFoods['custom_'+i] = food; });
+  Object.keys(counts).forEach(key => {
+    const food = allFoods[key];
+    if (!food || !counts[key]) return;
+    kcal += food.kcal * counts[key];
+    p += food.p * counts[key];
+    c += food.c * counts[key];
+    f += food.f * counts[key];
+  });
+  return { kcal, p, c, f };
+}
+
+function updateTotals() {
+  const { kcal, p, c, f } = getTotals();
+  document.getElementById('calVal').textContent = Math.round(kcal);
+  document.getElementById('proVal').textContent = Math.round(p);
+  document.getElementById('carbVal').textContent = Math.round(c);
+  document.getElementById('fatVal').textContent = Math.round(f);
+
+  const pct = Math.min((kcal / TARGET) * 100, 100);
+  const over = kcal > TARGET;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressFill').className = 'progress-fill' + (over ? ' over' : '');
+  document.getElementById('calCard').className = 'macro-card cal' + (over ? ' over' : '');
+
+  const copyBtn = document.getElementById('copyBtn');
+  copyBtn.disabled = kcal === 0;
+
+  const diff = TARGET - Math.round(kcal);
+  const hint = document.getElementById('targetHint');
+  if (kcal > 0) {
+    hint.innerHTML = diff > 0
+      ? `<span class="diff">${diff} kcal</span> to reach target`
+      : `<span class="diff over">${Math.abs(diff)} kcal</span> over target`;
+  } else {
+    hint.innerHTML = '';
+  }
+
+  save();
+}
+
+function save() {
+  const today = todayKey();
+  const { kcal, p, c, f } = getTotals();
+  localStorage.setItem('foodlog_' + today, JSON.stringify({
+    counts,
+    custom: customFoods,
+    totals: { kcal, p, c: c, f }
+  }));
+}
+
+function resetDay() {
+  if (!confirm('Clear today\'s log?')) return;
+  Object.keys(counts).forEach(k => counts[k] = 0);
+  document.querySelectorAll('.food-btn').forEach(btn => {
+    btn.className = 'food-btn';
+    const badge = btn.querySelector('.badge');
+    if (badge) badge.remove();
+  });
+  updateTotals();
+}
+
+function getItemLines() {
+  const allFoods = { ...Object.fromEntries(Object.keys(FOODS).flatMap(cat => FOODS[cat].map((food, i) => [cat+'_'+i, food]))) };
+  customFoods.forEach((food, i) => { allFoods['custom_'+i] = food; });
+  const lines = [];
+  Object.keys(counts).forEach(key => {
+    if (!counts[key]) return;
+    const food = allFoods[key];
+    if (!food) return;
+    lines.push(counts[key] > 1 ? `${counts[key]}x ${food.name}` : food.name);
+  });
+  return lines;
+}
+
+function copyLog() {
+  const { kcal, p, c, f } = getTotals();
+  const items = getItemLines();
+  const text = `Today's food log:\n${items.join(', ')}\n\nTotals: ${Math.round(kcal)} kcal, ${Math.round(p)}g protein, ${Math.round(c)}g carbs, ${Math.round(f)}g fat`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copyBtn');
+    btn.textContent = 'Copied!';
+    btn.className = 'copy-btn copied';
+    setTimeout(() => {
+      btn.textContent = 'Copy log for Claude';
+      btn.className = 'copy-btn';
+    }, 2000);
+  });
+}
+
+init();
+</script>
+</body>
+</html>
