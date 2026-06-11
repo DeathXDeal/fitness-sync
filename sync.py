@@ -123,6 +123,7 @@ def get_fitbit_data():
     return {
         "date": date_str,
         "steps": steps,
+        "calories_burnt": calories,
         "sleep_hours": sleep_hours
     }
 
