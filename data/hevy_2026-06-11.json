@@ -1,8 +1,10 @@
 {
-  "last_updated": "2026-06-11T07:26:56.482965",
+  "last_updated": "2026-06-11T07:32:29.362771",
   "total_workouts": 102,
   "fitbit_today": {
-    "error": "Expecting value: line 1 column 1 (char 0)"
+    "date": "2026-06-11",
+    "steps": 8151,
+    "sleep_hours": 7.2
   },
   "workouts": [
     {
