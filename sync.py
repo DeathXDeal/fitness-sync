@@ -86,6 +86,29 @@ def get_fitbit_data():
     )
     steps_data = steps_resp.json()
     steps = 0
+# Calories burned
+    calories_payload = {
+        "range": {
+            "start": {
+                "date": {"year": today.year, "month": today.month, "day": today.day},
+                "time": {"hours": 0, "minutes": 0, "seconds": 0, "nanos": 0}
+            },
+            "end": {
+                "date": {"year": today.year, "month": today.month, "day": today.day},
+                "time": {"hours": 23, "minutes": 59, "seconds": 59, "nanos": 0}
+            }
+        },
+        "windowSizeDays": 1
+    }
+    calories_resp = requests.post(
+        "https://health.googleapis.com/v4/users/me/dataTypes/calories.expended/dataPoints:dailyRollUp",
+        headers=headers, json=calories_payload
+    )
+    calories_data = calories_resp.json()
+    calories = 0
+    if calories_data.get("rollupDataPoints"):
+        calories = round(calories_data["rollupDataPoints"][0].get("calories.expended", {}).get("fpSum", 0))
+    
     if steps_data.get("rollupDataPoints"):
         steps = int(steps_data["rollupDataPoints"][0].get("steps", {}).get("countSum", 0))
 
