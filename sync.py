@@ -101,7 +101,7 @@ def get_fitbit_data():
         "windowSizeDays": 1
     }
     calories_resp = requests.post(
-        "https://health.googleapis.com/v4/users/me/dataTypes/calories.expended/dataPoints:dailyRollUp",
+        "https://health.googleapis.com/v4/users/me/dataTypes/total-calories/dataPoints:dailyRollUp",
         headers=headers, json=calories_payload
     )
     calories_data = calories_resp.json()
@@ -109,7 +109,7 @@ def get_fitbit_data():
 
     calories = 0
     if calories_data.get("rollupDataPoints"):
-        calories = round(calories_data["rollupDataPoints"][0].get("calories.expended", {}).get("fpSum", 0))
+        calories = round(calories_data["rollupDataPoints"][0].get("total-calories", {}).get("fpSum", 0))
     
     if steps_data.get("rollupDataPoints"):
         steps = int(steps_data["rollupDataPoints"][0].get("steps", {}).get("countSum", 0))
