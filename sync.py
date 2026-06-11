@@ -65,8 +65,8 @@ def get_fitbit_data():
         "Content-Type": "application/json"
     }
     today = datetime.utcnow()
+    date_str = today.strftime("%Y-%m-%d")
 
-    # Steps - daily total
     steps_payload = {
         "range": {
             "start": {
@@ -89,13 +89,22 @@ def get_fitbit_data():
     if steps_data.get("rollupDataPoints"):
         steps = int(steps_data["rollupDataPoints"][0].get("steps", {}).get("countSum", 0))
 
-    # Sleep - most recent
-    sleep_resp = requests.get(
-        f'ht
+    sleep_url = f"https://health.googleapis.com/v4/users/me/dataTypes/sleep/dataPoints:reconcile?filter=sleep.interval.civil_end_time >= \"{date_str}\""
+    sleep_resp = requests.get(sleep_url, headers=headers)
+    sleep_data = sleep_resp.json()
+    sleep_hours = 0
+    if sleep_data.get("dataPoints"):
+        minutes = int(sleep_data["dataPoints"][0].get("sleep", {}).get("summary", {}).get("minutesAsleep", 0))
+        sleep_hours = round(minutes / 60, 1)
+
+    return {
+        "date": date_str,
+        "steps": steps,
+        "sleep_hours": sleep_hours
+    }
 
 def main():
     workouts = get_all_workouts()
-    
     try:
         fitbit = get_fitbit_data()
     except Exception as e:
