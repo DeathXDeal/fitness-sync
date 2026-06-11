@@ -105,7 +105,7 @@ def get_fitbit_data():
         headers=headers, json=calories_payload
     )
     calories_data = calories_resp.json()
-        print("CALORIES RAW:", json.dumps(calories_data))  # DEBUG
+    print("CALORIES RAW:", json.dumps(calories_data))  # DEBUG
 
     calories = 0
     if calories_data.get("rollupDataPoints"):
