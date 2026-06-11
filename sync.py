@@ -59,25 +59,39 @@ def get_google_token():
 
 def get_fitbit_data():
     token = get_google_token()
-    headers = {"Authorization": f"Bearer {token}"}
-    today = datetime.utcnow().strftime("%Y-%m-%d")
-
-    activity = requests.get(
-        f"https://health.googleapis.com/v4/users/-/activities/date/{today}",
-        headers=headers
-    ).json()
-
-    sleep = requests.get(
-        f"https://health.googleapis.com/v4/users/-/sleep/date/{today}",
-        headers=headers
-    ).json()
-
-    return {
-        "date": today,
-        "steps": activity.get("summary", {}).get("steps", 0),
-        "calories_burnt": activity.get("summary", {}).get("caloriesOut", 0),
-        "sleep_hours": round(sleep.get("summary", {}).get("totalMinutesAsleep", 0) / 60, 1)
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/json",
+        "Content-Type": "application/json"
     }
+    today = datetime.utcnow()
+
+    # Steps - daily total
+    steps_payload = {
+        "range": {
+            "start": {
+                "date": {"year": today.year, "month": today.month, "day": today.day},
+                "time": {"hours": 0, "minutes": 0, "seconds": 0, "nanos": 0}
+            },
+            "end": {
+                "date": {"year": today.year, "month": today.month, "day": today.day},
+                "time": {"hours": 23, "minutes": 59, "seconds": 59, "nanos": 0}
+            }
+        },
+        "windowSizeDays": 1
+    }
+    steps_resp = requests.post(
+        "https://health.googleapis.com/v4/users/me/dataTypes/steps/dataPoints:dailyRollUp",
+        headers=headers, json=steps_payload
+    )
+    steps_data = steps_resp.json()
+    steps = 0
+    if steps_data.get("rollupDataPoints"):
+        steps = int(steps_data["rollupDataPoints"][0].get("steps", {}).get("countSum", 0))
+
+    # Sleep - most recent
+    sleep_resp = requests.get(
+        f'ht
 
 def main():
     workouts = get_all_workouts()
