@@ -130,6 +130,7 @@ def get_fitbit_data():
     weight_kg = None
     if weight_data.get("dataPoints"):
         weight_kg = round(weight_data["dataPoints"][0].get("weight", {}).get("kg", 0), 1)
+        print("WEIGHT RAW:", json.dumps(weight_data))
 
     
     return {
