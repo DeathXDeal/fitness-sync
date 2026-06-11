@@ -121,12 +121,23 @@ def get_fitbit_data():
     if sleep_data.get("dataPoints"):
         minutes = int(sleep_data["dataPoints"][0].get("sleep", {}).get("summary", {}).get("minutesAsleep", 0))
         sleep_hours = round(minutes / 60, 1)
+# Weight - most recent
+    weight_resp = requests.get(
+        "https://health.googleapis.com/v4/users/me/dataTypes/weight/dataPoints?pageSize=1",
+        headers=headers
+    )
+    weight_data = weight_resp.json()
+    weight_kg = None
+    if weight_data.get("dataPoints"):
+        weight_kg = round(weight_data["dataPoints"][0].get("weight", {}).get("kg", 0), 1)
 
+    
     return {
         "date": date_str,
         "steps": steps,
         "calories_burnt": calories,
-        "sleep_hours": sleep_hours
+        "sleep_hours": sleep_hours,
+        "weight_kg": weight_kg
     }
 
 def main():
