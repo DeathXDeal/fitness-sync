@@ -1,14 +1,111 @@
 {
-  "last_updated": "2026-06-12T04:09:22.861971",
-  "total_workouts": 102,
+  "last_updated": "2026-06-12T08:36:03.263263",
+  "total_workouts": 103,
   "fitbit_today": {
     "date": "2026-06-12",
-    "steps": 7014,
-    "calories_burnt": 1524,
+    "steps": 10952,
+    "calories_burnt": 2420,
     "sleep_hours": 7.8,
     "weight_kg": 62.0
   },
   "workouts": [
+    {
+      "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
+      "start_time": "2026-06-12T03:54:12+00:00",
+      "end_time": "2026-06-12T05:24:28+00:00",
+      "exercises": [
+        {
+          "title": "Lat Pulldown (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 70
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown - Close Grip (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 60
+            }
+          ]
+        },
+        {
+          "title": "Iso-Lateral Row (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 80
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 80
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 80
+            }
+          ]
+        },
+        {
+          "title": "Face Pull",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 21.25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 25
+            }
+          ]
+        },
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 45
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Afternoon workout \ud83d\udcaa",
       "start_time": "2026-06-10T04:49:03+00:00",
