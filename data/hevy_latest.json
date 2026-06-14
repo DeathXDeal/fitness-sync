@@ -1,14 +1,166 @@
 {
-  "last_updated": "2026-06-14T11:32:11.185546",
-  "total_workouts": 103,
+  "last_updated": "2026-06-14T14:06:58.634933",
+  "total_workouts": 104,
   "fitbit_today": {
     "date": "2026-06-14",
-    "steps": 8002,
-    "calories_burnt": 2139,
+    "steps": 19091,
+    "calories_burnt": 3474,
     "sleep_hours": 6.3,
     "weight_kg": 62.2
   },
   "workouts": [
+    {
+      "title": "Late night workout \ud83c\udf19",
+      "start_time": "2026-06-14T10:44:15+00:00",
+      "end_time": "2026-06-14T12:30:46+00:00",
+      "exercises": [
+        {
+          "title": "Bench Press (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 30
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            }
+          ]
+        },
+        {
+          "title": "Iso-Lateral Chest Press (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 40
+            }
+          ]
+        },
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 61
+            }
+          ]
+        },
+        {
+          "title": "Shoulder Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 10
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 12.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 15
+            }
+          ]
+        },
+        {
+          "title": "Lateral Raise (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 6.25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 6.25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 6.25
+            }
+          ]
+        },
+        {
+          "title": "Triceps Extension (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 16.25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 16.25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 16.25
+            }
+          ]
+        },
+        {
+          "title": "Triceps Pushdown",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 8
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 8
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
       "start_time": "2026-06-12T03:54:12+00:00",
