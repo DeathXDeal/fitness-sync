@@ -1,14 +1,81 @@
 {
-  "last_updated": "2026-06-16T04:22:21.434336",
-  "total_workouts": 105,
+  "last_updated": "2026-06-16T10:09:56.695065",
+  "total_workouts": 106,
   "fitbit_today": {
     "date": "2026-06-16",
-    "steps": 167,
-    "calories_burnt": 1036,
+    "steps": 6211,
+    "calories_burnt": 2157,
     "sleep_hours": 12.0,
     "weight_kg": 63.2
   },
   "workouts": [
+    {
+      "title": "LEG DAY AND ABS FOCUSED",
+      "start_time": "2026-06-16T09:15:13+00:00",
+      "end_time": "2026-06-16T09:59:49+00:00",
+      "exercises": [
+        {
+          "title": "Leg Press (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 12,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 120
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 130
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 130
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 130
+            }
+          ]
+        },
+        {
+          "title": "Leg Extension (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 66
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 66
+            }
+          ]
+        },
+        {
+          "title": "Seated Leg Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 47
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
       "start_time": "2026-06-15T10:20:37+00:00",
