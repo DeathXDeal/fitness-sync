@@ -1,10 +1,167 @@
 {
-  "last_updated": "2026-06-21T06:03:48.524555",
-  "total_workouts": 108,
+  "last_updated": "2026-06-21T10:31:07.584884",
+  "total_workouts": 109,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "Evening workout \ud83c\udfcb\ufe0f",
+      "start_time": "2026-06-21T08:34:28+00:00",
+      "end_time": "2026-06-21T10:10:28+00:00",
+      "exercises": [
+        {
+          "title": "Bench Press (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 1,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 1,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 60
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 60
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 60
+            }
+          ]
+        },
+        {
+          "title": "Incline Bench Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 22.5
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 20
+            }
+          ]
+        },
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 63.5
+            }
+          ]
+        },
+        {
+          "title": "Shoulder Press (Machine Plates)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 27.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 30
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 30
+            }
+          ]
+        },
+        {
+          "title": "Lateral Raise (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 6.25
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 6.25
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 6.25
+            }
+          ]
+        },
+        {
+          "title": "Triceps Extension (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 18.75
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 18.75
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 18.75
+            }
+          ]
+        },
+        {
+          "title": "Triceps Pushdown",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 23.75
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 26.25
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 26.25
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
       "start_time": "2026-06-18T09:07:43+00:00",
