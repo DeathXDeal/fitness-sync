@@ -1,10 +1,132 @@
 {
-  "last_updated": "2026-06-22T10:39:48.062772",
-  "total_workouts": 109,
+  "last_updated": "2026-06-22T15:53:43.123180",
+  "total_workouts": 110,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
+      "start_time": "2026-06-22T09:28:28+00:00",
+      "end_time": "2026-06-22T10:43:57+00:00",
+      "exercises": [
+        {
+          "title": "Lat Pulldown (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown - Close Grip (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70
+            }
+          ]
+        },
+        {
+          "title": "Iso-Lateral Row (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 80
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 90
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 90
+            }
+          ]
+        },
+        {
+          "title": "Face Pull",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 32.5
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 32.5
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 32.5
+            }
+          ]
+        },
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 53
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 53
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 53
+            }
+          ]
+        },
+        {
+          "title": "Hammer Curl (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 18.75
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 18.75
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 17.5
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Evening workout \ud83c\udfcb\ufe0f",
       "start_time": "2026-06-21T08:34:28+00:00",
