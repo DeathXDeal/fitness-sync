@@ -1,10 +1,82 @@
 {
-  "last_updated": "2026-06-25T03:42:47.415880",
-  "total_workouts": 110,
+  "last_updated": "2026-06-25T07:44:31.801587",
+  "total_workouts": 111,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "Afternoon workout \ud83d\udcaa",
+      "start_time": "2026-06-25T05:56:31+00:00",
+      "end_time": "2026-06-25T06:35:17+00:00",
+      "exercises": [
+        {
+          "title": "Bench Press (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 60
+            },
+            {
+              "set_type": null,
+              "reps": 4,
+              "weight_kg": 60
+            }
+          ]
+        },
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 65
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 65
+            }
+          ]
+        },
+        {
+          "title": "Lat Pulldown (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 75
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 75
+            }
+          ]
+        },
+        {
+          "title": "Seated Cable Row - Bar Grip",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
       "start_time": "2026-06-22T09:28:28+00:00",
