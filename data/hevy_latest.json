@@ -1,10 +1,162 @@
 {
-  "last_updated": "2026-06-29T14:05:38.340944",
-  "total_workouts": 111,
+  "last_updated": "2026-06-29T17:38:24.408734",
+  "total_workouts": 112,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "Late night workout \ud83c\udf19",
+      "start_time": "2026-06-29T12:43:34+00:00",
+      "end_time": "2026-06-29T14:45:58+00:00",
+      "exercises": [
+        {
+          "title": "Bench Press (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 60
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 60
+            }
+          ]
+        },
+        {
+          "title": "Incline Bench Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 17.5
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 22.5
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 22.5
+            },
+            {
+              "set_type": null,
+              "reps": 5,
+              "weight_kg": 22.5
+            }
+          ]
+        },
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 65
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 65
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 65
+            }
+          ]
+        },
+        {
+          "title": "Shoulder Press (Machine Plates)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 4,
+              "weight_kg": 55
+            }
+          ]
+        },
+        {
+          "title": "Lateral Raise (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 32
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 32
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 34.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 34.2
+            }
+          ]
+        },
+        {
+          "title": "Triceps Extension (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 15
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 15
+            }
+          ]
+        },
+        {
+          "title": "Triceps Pushdown",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 24.5
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 28
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 28
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Afternoon workout \ud83d\udcaa",
       "start_time": "2026-06-25T05:56:31+00:00",
