@@ -1,10 +1,87 @@
 {
-  "last_updated": "2026-07-01T05:22:17.565426",
-  "total_workouts": 113,
+  "last_updated": "2026-07-01T09:50:47.250357",
+  "total_workouts": 114,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "LEG DAY AND ABS FOCUSED",
+      "start_time": "2026-07-01T08:49:29+00:00",
+      "end_time": "2026-07-01T09:34:46+00:00",
+      "exercises": [
+        {
+          "title": "Squat (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            }
+          ]
+        },
+        {
+          "title": "Leg Extension (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            }
+          ]
+        },
+        {
+          "title": "Lying Leg Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
       "start_time": "2026-06-30T10:13:09+00:00",
