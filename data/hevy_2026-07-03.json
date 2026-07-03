@@ -1,10 +1,97 @@
 {
-  "last_updated": "2026-07-03T04:42:39.051967",
-  "total_workouts": 115,
+  "last_updated": "2026-07-03T08:10:26.752790",
+  "total_workouts": 116,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
+      "start_time": "2026-07-03T06:10:24+00:00",
+      "end_time": "2026-07-03T07:38:35+00:00",
+      "exercises": [
+        {
+          "title": "Lat Pulldown (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 72.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 72.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 72.5
+            }
+          ]
+        },
+        {
+          "title": "Seated Cable Row - Bar Grip",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 61
+            }
+          ]
+        },
+        {
+          "title": "Iso-Lateral Row (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 100
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 100
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 100
+            }
+          ]
+        },
+        {
+          "title": "Face Pull",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 35
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 38.5
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 38.5
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Evening workout \ud83c\udfcb\ufe0f",
       "start_time": "2026-07-02T08:20:20+00:00",
