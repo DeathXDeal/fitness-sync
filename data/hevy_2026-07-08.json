@@ -1,10 +1,102 @@
 {
-  "last_updated": "2026-07-08T08:30:47.474896",
-  "total_workouts": 119,
+  "last_updated": "2026-07-08T11:06:09.908806",
+  "total_workouts": 120,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "LEG DAY AND ABS FOCUSED",
+      "start_time": "2026-07-08T08:41:09+00:00",
+      "end_time": "2026-07-08T09:41:41+00:00",
+      "exercises": [
+        {
+          "title": "Squat (Barbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 40
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 50
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55
+            }
+          ]
+        },
+        {
+          "title": "Leg Extension (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 66
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 66
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 66
+            }
+          ]
+        },
+        {
+          "title": "Lying Leg Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            },
+            {
+              "set_type": null,
+              "reps": 7,
+              "weight_kg": 53
+            }
+          ]
+        },
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 55.5
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Afternoon workout \ud83d\udcaa",
       "start_time": "2026-07-07T06:58:53+00:00",
