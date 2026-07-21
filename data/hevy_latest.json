@@ -1,10 +1,142 @@
 {
-  "last_updated": "2026-07-21T11:47:04.056463",
-  "total_workouts": 123,
+  "last_updated": "2026-07-21T13:53:44.126108",
+  "total_workouts": 124,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "Late night workout \ud83c\udf19",
+      "start_time": "2026-07-21T12:01:58+00:00",
+      "end_time": "2026-07-21T13:29:52+00:00",
+      "exercises": [
+        {
+          "title": "Butterfly (Pec Deck)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 63.5
+            },
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 63.5
+            }
+          ]
+        },
+        {
+          "title": "Incline Bench Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 6,
+              "weight_kg": 22.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 20
+            }
+          ]
+        },
+        {
+          "title": "Shoulder Press (Dumbbell)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 17.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 17.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 17.5
+            }
+          ]
+        },
+        {
+          "title": "Lateral Raise (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 12,
+              "weight_kg": 6.75
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 8.75
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 8.75
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 8.75
+            }
+          ]
+        },
+        {
+          "title": "Triceps Extension (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 21
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 21
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 18.75
+            }
+          ]
+        },
+        {
+          "title": "Triceps Pushdown",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 28
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 28
+            },
+            {
+              "set_type": null,
+              "reps": 10,
+              "weight_kg": 28
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "PULL DAY (BACK/BICEPS/FOREARMS)",
       "start_time": "2026-07-20T06:45:44+00:00",
