@@ -1,10 +1,144 @@
 {
-  "last_updated": "2026-07-22T04:17:09.337083",
-  "total_workouts": 124,
+  "last_updated": "2026-07-22T07:34:21.975801",
+  "total_workouts": 126,
   "fitbit_today": {
     "error": "'access_token'"
   },
   "workouts": [
+    {
+      "title": "Afternoon workout \ud83d\udcaa",
+      "start_time": "2026-07-15T02:00:00+00:00",
+      "end_time": "2026-07-15T02:00:17+00:00",
+      "exercises": [
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LEG DAY AND ABS FOCUSED",
+      "start_time": "2026-07-22T04:46:17+00:00",
+      "end_time": "2026-07-22T06:10:55+00:00",
+      "exercises": [
+        {
+          "title": "Leg Extension (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 66
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 68
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 70.5
+            },
+            {
+              "set_type": null,
+              "reps": 4,
+              "weight_kg": 75
+            }
+          ]
+        },
+        {
+          "title": "Leg Press (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 140
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 140
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 160
+            }
+          ]
+        },
+        {
+          "title": "Preacher Curl (Machine)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 46
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 58
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 58
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 58
+            }
+          ]
+        },
+        {
+          "title": "Triceps Pushdown",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 28
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 24.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 24.5
+            }
+          ]
+        },
+        {
+          "title": "Hammer Curl (Cable)",
+          "sets": [
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 24.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 24.5
+            },
+            {
+              "set_type": null,
+              "reps": 8,
+              "weight_kg": 24.5
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Late night workout \ud83c\udf19",
       "start_time": "2026-07-21T12:01:58+00:00",
